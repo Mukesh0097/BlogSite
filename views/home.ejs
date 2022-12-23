@@ -1,0 +1,27 @@
+<%- include("partials/header"); %>
+<h1>Home</h1>
+<p><%= startingPara %></p>
+
+
+
+
+<% listname.forEach(function(list){%>
+<div class="box">
+    <h1><%= list.input1 %></h1>
+    <p>
+        <%= list.input2.substring(0,100) + "..."  %>
+        <a href="/post/<%= list.input1 %>">Read more</a>
+    
+    </p>
+    
+   
+</div>
+ <% }); %>
+<div class="box">
+    <a href=""></a>
+</div>   
+
+
+
+
+<%- include("partials/footer"); %>
